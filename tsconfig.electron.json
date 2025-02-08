@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "lib": [
+            "ES2020",
+        ],
+        "skipLibCheck": true,
+        "moduleResolution": "node",
+        "noEmit": false,
+        "strict": true,
+        "outDir": "dist",
+    },
+    "include": [
+        "src/electronMain.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
