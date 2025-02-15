@@ -1,5 +1,16 @@
 # Cross-Platform Project {{projectName}}
 
+## How to start your own project using this template
+
+```bash
+npx create-react-vite-capacitor-electron
+```
+
+## Don't forget to install the dependencies
+
+```bash
+npm install
+```
 ## Build for Web
 
 ```bash
