@@ -1,17 +1,20 @@
 {
     "compilerOptions": {
-        "target": "ES2020",
+        "target": "ESNext",
         "lib": [
-            "ES2020",
+            "ESNext",
         ],
         "skipLibCheck": true,
         "moduleResolution": "node",
         "noEmit": false,
         "strict": true,
-        "outDir": "dist",
+        "outDir": "dist-electron",
+        "module": "CommonJS",
+        "esModuleInterop": true
     },
     "include": [
-        "src/electronMain.ts"
+        "src/electronMain.ts",
+        "src/preload.ts"
     ],
     "exclude": [
         "node_modules"

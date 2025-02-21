@@ -1,11 +1,17 @@
 import { useCallback } from 'react';
 import Page2 from './Page2';
 import { useNavigate } from 'react-router-dom';
+import { useStorage, LOCAL_STORAGE, ELECTRON_KEY_VALUE_STORAGE } from './util/Storage';
+import { environmentCheck } from './util/EnvironmentHelper';
+
 
 const PAGE_NAME = 'Page1';
 const PAGE_PATH = '/page1';
 
 export function Page1() {
+
+    const [storedVar, setStoredVar] = useStorage<string>(environmentCheck.isElectron ? ELECTRON_KEY_VALUE_STORAGE : LOCAL_STORAGE, 'storedVar', 'defaultValue');
+
     const navigate = useNavigate();
 
     const handleClick = useCallback(() => {
@@ -16,6 +22,8 @@ export function Page1() {
     <div>
         <h1>{PAGE_NAME}</h1>
         <button onClick={handleClick}>Go to Page2</button>
+        <p>Stored Var: {storedVar}</p>
+        <input type="text" value={storedVar} onChange={(e) => setStoredVar(e.target.value)} />
     </div>
     );
 }

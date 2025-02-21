@@ -1,15 +1,20 @@
-import { app, BrowserWindow	} from 'electron';
+const { app, BrowserWindow	} = require('electron');
+const path = require('node:path')
 
 const WINDOW_WIDTH_DEFAULT = 800;
 const WINDOW_HEIGHT_DEFAULT = 600;
-const ENTRY_POINT = 'dist/index.html';
+const ENTRY_POINT = './index.html';
 
 const createWindow = () => {
 	const win =	new	BrowserWindow({
 		width: WINDOW_WIDTH_DEFAULT,
 		height: WINDOW_HEIGHT_DEFAULT,
+		webPreferences: {
+			preload: path.join(__dirname, 'preload.js'),
+			sandbox: false
+		},
 	});
-	win.loadFile(ENTRY_POINT);
+	win.loadFile(path.join(__dirname, ENTRY_POINT));
 }
 
 app.whenReady().then(()	=> {
