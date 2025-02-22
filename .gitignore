@@ -26,3 +26,8 @@ dist-ssr
 # Mobile generated folders
 android
 ios
+
+dist-electron
+
+# User data is where the data from app running during development is stored
+userData

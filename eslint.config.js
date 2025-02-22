@@ -41,6 +41,7 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       '@typescript-eslint/no-floating-promises': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
 )
