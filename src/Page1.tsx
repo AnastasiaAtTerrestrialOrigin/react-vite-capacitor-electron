@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 import Page2 from './Page2';
 import { useNavigate } from 'react-router-dom';
-import { useStorage, LOCAL_STORAGE, environmentCheck } from 'terrestrial-util';
-import { ELECTRON_KEY_VALUE_STORAGE } from 'terrestrial-util-electron';
+import { useStorage, LOCAL_STORAGE, environmentCheck } from 'cross-platform-util';
+import { ELECTRON_KEY_VALUE_STORAGE } from 'cross-platform-util-electron-preload';
 
 
 const PAGE_NAME = 'Page1';
