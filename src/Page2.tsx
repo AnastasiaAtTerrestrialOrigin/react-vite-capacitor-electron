@@ -15,7 +15,7 @@ export function Page2() {
     return (
     <div>
         <h1>{PAGE_NAME}</h1>
-        <button onClick={handleClick}>Go to Page1</button>
+        <button onClick={handleClick}>Go to {Page1.displayName}</button>
     </div>
     );
 }
